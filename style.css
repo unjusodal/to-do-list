@@ -91,6 +91,7 @@ body button {
   -webkit-transition: all 100ms ease;
   transition: all 100ms ease;
   border-radius: 5px;
+  font-weight: 500;
 }
 body button:hover {
   cursor: pointer;
@@ -100,7 +101,7 @@ body button:active {
           transform: scale(95%);
 }
 body button:focus {
-  outline: #413F42 solid 2px;
+  outline: #7FB5FF solid 2px;
 }
 
 main {
@@ -119,14 +120,14 @@ main h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #header-div #color-theme-btn {
-  border: 3px solid #4D77FF;
+  border: 3px solid #7FB5FF;
   border-radius: 5px;
-  color: #4D77FF;
+  color: #7FB5FF;
   width: 80px;
   height: 40px;
   font-size: 1.2rem;
@@ -171,4 +172,18 @@ main h4 {
   font-size: 1rem;
   border: none;
   margin-left: 10px;
+}
+
+@media (max-width: 450px) {
+  #input-div button, .to-do button {
+    margin: 0;
+  }
+
+  #input-div {
+    padding-right: 10px;
+  }
+
+  .to-do {
+    padding-right: 10px;
+  }
 }
