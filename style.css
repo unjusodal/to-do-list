@@ -1,0 +1,174 @@
+.darkTheme {
+  background-color: #413F42;
+  color: #F2F2F2;
+}
+.darkTheme ::-webkit-input-placeholder {
+  color: rgba(242, 242, 242, 0.6);
+}
+.darkTheme ::-moz-placeholder {
+  color: rgba(242, 242, 242, 0.6);
+}
+.darkTheme :-ms-input-placeholder {
+  color: rgba(242, 242, 242, 0.6);
+}
+.darkTheme ::-ms-input-placeholder {
+  color: rgba(242, 242, 242, 0.6);
+}
+.darkTheme ::placeholder {
+  color: rgba(242, 242, 242, 0.6);
+}
+.darkTheme #color-theme-btn {
+  background-color: #413F42;
+}
+.darkTheme #input-div input {
+  border-bottom: 1px solid #F2F2F2;
+}
+.darkTheme #input-div input:hover {
+  cursor: pointer;
+}
+.darkTheme #input-div, .darkTheme .to-do {
+  background-color: #73777B;
+}
+.darkTheme #input-div input, .darkTheme .to-do input {
+  background-color: #73777B;
+  color: #F2F2F2;
+}
+.darkTheme #input-div button, .darkTheme .to-do button {
+  background-color: #73777B;
+  color: #F2F2F2;
+}
+
+.lightTheme {
+  background-color: #F6FBF4;
+  color: #413F42;
+}
+.lightTheme ::-webkit-input-placeholder {
+  color: rgba(65, 63, 66, 0.6);
+}
+.lightTheme ::-moz-placeholder {
+  color: rgba(65, 63, 66, 0.6);
+}
+.lightTheme :-ms-input-placeholder {
+  color: rgba(65, 63, 66, 0.6);
+}
+.lightTheme ::-ms-input-placeholder {
+  color: rgba(65, 63, 66, 0.6);
+}
+.lightTheme ::placeholder {
+  color: rgba(65, 63, 66, 0.6);
+}
+.lightTheme #color-theme-btn {
+  background-color: #F6FBF4;
+}
+.lightTheme #input-div input {
+  border-bottom: 1px solid #413F42;
+}
+.lightTheme #input-div input:hover {
+  cursor: pointer;
+}
+.lightTheme #input-div, .lightTheme .to-do {
+  background-color: #DAEAF1;
+}
+.lightTheme #input-div input, .lightTheme .to-do input {
+  background-color: #DAEAF1;
+  color: #413F42;
+}
+.lightTheme #input-div button, .lightTheme .to-do button {
+  background-color: #DAEAF1;
+  color: #413F42;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 1.3rem;
+}
+body button {
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+  border-radius: 5px;
+}
+body button:hover {
+  cursor: pointer;
+}
+body button:active {
+  -webkit-transform: scale(95%);
+          transform: scale(95%);
+}
+body button:focus {
+  outline: #413F42 solid 2px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
+}
+main h4 {
+  margin-bottom: 5px;
+}
+
+#header-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+#header-div #color-theme-btn {
+  border: 3px solid #4D77FF;
+  border-radius: 5px;
+  color: #4D77FF;
+  width: 80px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#input-div {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#input-div input:hover {
+  cursor: pointer;
+}
+
+.to-do {
+  margin: 5px 0;
+  padding: 10px 20px;
+}
+.to-do input:focus {
+  outline: none;
+}
+
+#input-div, .to-do {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+}
+#input-div input, .to-do input {
+  width: 100%;
+  border: none;
+  padding: 5px 0;
+  font-size: 1.1rem;
+}
+#input-div input:focus, .to-do input:focus {
+  outline: none;
+}
+#input-div button, .to-do button {
+  font-size: 1rem;
+  border: none;
+  margin-left: 10px;
+}

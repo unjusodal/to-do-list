@@ -1,0 +1,67 @@
+.darkTheme {
+    background-color: $bg-color-dark;
+    color: $text-color-dark;
+
+    ::placeholder {
+        color: rgba($text-color-dark, $alpha: 0.6)
+    }
+
+    #color-theme-btn {
+        background-color: $bg-color-dark;
+    }
+
+    #input-div {
+        input {
+            border-bottom: 1px solid $text-color-dark;
+        }
+        input:hover {
+            cursor: pointer;
+        }
+    }
+
+    #input-div, .to-do {
+        background-color: $secondary-bg-color-dark;
+        input {
+            background-color: $secondary-bg-color-dark;
+            color: $text-color-dark;
+        }
+        button {
+            background-color: $secondary-bg-color-dark;
+            color: $text-color-dark;
+        }
+    }
+}
+
+.lightTheme {
+    background-color: $bg-color-light;
+    color: $text-color-light;
+
+    ::placeholder {
+        color: rgba($text-color-light, $alpha: 0.6)
+    }
+
+    #color-theme-btn {
+        background-color: $bg-color-light;
+    }
+
+    #input-div {
+        input {
+            border-bottom: 1px solid $text-color-light;
+        }
+        input:hover {
+            cursor: pointer;
+        }
+    }
+
+    #input-div, .to-do {
+        background-color: $secondary-bg-color-light;
+        input {
+            background-color: $secondary-bg-color-light;
+            color: $text-color-light;
+        }
+        button {
+            background-color: $secondary-bg-color-light;
+            color: $text-color-light;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@import "variables";
+@import "colorThemes";
+
+@mixin generalButtonsStyle {
+    button {
+        transition: all 100ms ease;
+        border-radius: 5px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+    button:active {
+        transform: scale(95%);
+    }
+    button:focus {
+        outline: $bg-color-dark solid 2px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 1.3rem;
+    @include generalButtonsStyle;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+    h4 {
+        margin-bottom: 5px;
+    }
+}
+
+#header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    #color-theme-btn {
+        border: 3px solid $blue-color;
+        border-radius: 5px;
+        color: $blue-color;
+        width: 80px;
+        height: 40px;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+#input-div {
+    margin-bottom: 20px;
+    padding: 20px;
+    input:hover {
+        cursor: pointer;
+    }
+}
+
+.to-do {
+    margin: 5px 0;
+    padding: 10px 20px;
+    input:focus {
+        outline: none;
+        // border-bottom: 1px solid $text-color-dark;
+    }
+
+}
+
+#input-div, .to-do {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    input {
+        width: 100%;
+        border: none;
+        padding: 5px 0;
+        font-size: 1.1rem;
+    }
+    input:focus {
+        outline: none;
+    }
+    button {
+        font-size: 1rem;
+        border: none;
+        margin-left: 10px;
+    }
+}
