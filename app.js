@@ -4,6 +4,7 @@ const toDosCollection = document.getElementById("toDosCollectionDiv")
 
 let toDosArray = []
 
+//LocalStorage actions
 actionsLS = {
     renderToDos : () => {
         if (localStorage.getItem("toDosArray")) {
@@ -31,6 +32,29 @@ actionsLS = {
         const i = toDosArray.indexOf(inputValueOld)
         toDosArray[i] = inputValueNew
         localStorage.setItem("toDosArray", JSON.stringify(toDosArray))
+    },
+
+    saveTheme : (themeName) => {
+        localStorage.setItem("theme", themeName)
+    },
+
+    renderSavedTheme : () => {
+        const defaultColorTheme = "Dark"
+        if (localStorage.getItem("theme")) {
+            colorThemeBtn.innerText = localStorage.getItem("theme")
+
+            switch (colorThemeBtn.innerText) {
+                case "Dark":
+                    colorTheme.setDarkTheme()
+                    break;
+                case "Light":
+                    colorTheme.setLightTheme()
+                    break;
+            }
+
+        } else {
+            colorThemeBtn.innerText = defaultColorTheme
+        }
     }
 }
 
@@ -87,16 +111,30 @@ function createToDo(inputValue) {
 //Color theme
 const bodyElement = document.querySelector("body")
 const colorThemeBtn = document.getElementById("color-theme-btn")
-colorThemeBtn.innerText = "Dark"
+colorThemeBtn.setAttribute("onclick", "changeColorTheme()")
 
-colorThemeBtn.addEventListener("click", () => {
-    if (colorThemeBtn.innerText === "Dark") {
+const colorTheme = {
+    setLightTheme : () => {
         colorThemeBtn.innerText = "Light"
         bodyElement.classList.remove("darkTheme")
         bodyElement.classList.add("lightTheme")
-    } else {
+    },
+
+    setDarkTheme : () => {
         colorThemeBtn.innerText = "Dark"
         bodyElement.classList.remove("lightTheme")
         bodyElement.classList.add("darkTheme")
     }
-})
+}
+
+actionsLS.renderSavedTheme()
+
+function changeColorTheme() {
+    if (colorThemeBtn.innerText === "Dark") {
+        colorTheme.setLightTheme()
+    } else {
+        colorTheme.setDarkTheme()
+    }
+
+    actionsLS.saveTheme(colorThemeBtn.innerText)
+}
