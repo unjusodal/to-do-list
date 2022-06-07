@@ -10,8 +10,8 @@ actionsLS = {
         if (localStorage.getItem("toDosArray")) {
             toDosArray = localStorage.getItem("toDosArray")
             toDosArray = JSON.parse(toDosArray)
-            for (let i = 0; i < toDosArray.length; i++) {
-            createToDo(toDosArray[i])
+            for (let toDo of toDosArray) {
+            createToDo(toDo)
             }
         } else {
             return
